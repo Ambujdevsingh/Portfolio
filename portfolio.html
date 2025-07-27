@@ -227,6 +227,29 @@
             color: var(--color-text-light); /* Lighter on hover */
         }
 
+        /* Ensure consistent height for project card content */
+        .project-card .content-area {
+            min-height: 180px; /* Adjust this value as needed to ensure consistent height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Pushes tech/methodology to bottom */
+        }
+
+        /* Styling for the new icons in project cards */
+        .project-icon-wrapper {
+            background-color: #2A2A2A; /* Darker background for the icon area */
+            height: 192px; /* Fixed height to match previous image height (h-48) */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--color-border-subtle);
+        }
+        /* Styling for Lucide icons in project cards */
+        .project-icon-wrapper i[data-lucide] {
+            font-size: 5rem; /* Large icon size */
+            color: #6EE7B7; /* A vibrant green for icons */
+            stroke-width: 1.5; /* Slightly thicker stroke for better visibility */
+        }
     </style>
 </head>
 <body>
@@ -325,6 +348,7 @@
                         <li>Data API Integration</li>
                         <li>Financial Payments API Integration</li>
                         <li>Payment Gateways: Axis Bank, Cashfree, Razorpay</li>
+                        <li>WhatsApp Chatbot & API Integration</li>
                     </ul>
                 </div>
                 <div class="card-bg-dark p-6 rounded-3xl shadow-lg solid-border-accent">
@@ -517,14 +541,12 @@
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/212121/BDBDBD?text=AI+Personalization+Flow" alt="AI Personalization Engine Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark-heading mb-2">AI-Powered Personalization Engine</h3>
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="lightbulb"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Personalized Incentive Calculator (AI-Powered)</h3>
                         <p class="text-sm text-dark-body mb-3">
-                            **Your Role:** Product Lead.
-                            Developed and launched an ML-driven engine for personalized content recommendations.
-                        </p>
-                        <p class="text-dark-body text-sm mb-3">
                             **Problem & Solution:** Generic user experiences led to low engagement. The engine delivered tailored content, boosting relevance.
                         </p>
                         <p class="text-dark-body text-sm mb-3">
@@ -536,14 +558,12 @@
                     </div>
                 </div>
                 <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/212121/BDBDBD?text=Predictive+Analytics+Charts" alt="Predictive Analytics Platform Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark-heading mb-2">Predictive Analytics Platform</h3>
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="trending-down"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Customer Churn Prediction Platform</h3>
                         <p class="text-sm text-dark-body mb-3">
-                            **Your Role:** Core Product Manager.
-                            Built a platform to predict customer churn for enterprise clients.
-                        </p>
-                        <p class="text-dark-body text-sm mb-3">
                             **Problem & Solution:** Clients lacked foresight into customer retention. The platform provided early warnings, enabling proactive interventions.
                         </p>
                         <p class="text-dark-body text-sm mb-3">
@@ -555,14 +575,12 @@
                     </div>
                 </div>
                 <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
-                    <img src="https://placehold.co/600x350/212121/BDBDBD?text=Chatbot+UI+Brain" alt="Conversational AI Assistant Image" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-dark-heading mb-2">Conversational AI Assistant</h3>
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="bot"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Internal AI Chatbot for Support</h3>
                         <p class="text-sm text-dark-body mb-3">
-                            **Your Role:** Product Manager.
-                            Developed an internal AI chatbot for employee support and knowledge retrieval.
-                        </p>
-                        <p class="text-dark-body text-sm mb-3">
                             **Problem & Solution:** Employees spent too much time searching for information. The assistant provided instant, accurate answers.
                         </p>
                         <p class="text-dark-body text-sm mb-3">
@@ -573,6 +591,121 @@
                         </p>
                     </div>
                 </div>
+
+                <!-- New Project 1: SaaS-Based Call Center Product for Lead & Resolution Management -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="headset"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Call Center Lead & Resolution SaaS</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** Disorganized lead handling and inconsistent resolution quality were leading to missed conversion opportunities. Implemented structured workflows with KPIs for FTR, TAT, and lead prioritization.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Improved lead conversion rates by 20%, enhanced SLA compliance by 30%, and reduced turnaround time by 25%.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** Agile, Zoho CRM, Cloud Dialers, REST APIs, Workflow Automation, SLA Dashboards, Vendor Collaboration Models.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New Project 2: Data SaaS Platform – Business Intelligence & Dashboard Development -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="database"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Enterprise BI & Data Analytics Platform</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** Lack of centralized data insights hampered marketing and sales strategy. Built a unified data platform integrating survey results and campaign metrics for performance tracking.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Increased customer acquisition by 15%, reduced marketing cost by 10%, and enabled a successful new product launch that grew sales by 15% in the first year.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** Power BI, SQL, Agile, Customer Surveys, DAX, A/B Testing, Data Lake Integration, Funnel Analysis.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New Project 3: Expert Consultation Feature for MSME Helpline -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="handshake"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">MSME Expert Consultation Module</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** MSMEs lacked access to reliable business advice. Introduced expert-guided sessions to offer tailored consultation based on user type and industry.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Increased consultation satisfaction scores by 40%, reduced guidance resolution time by 30%, and drove user retention on the helpline platform.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** WebRTC, Node.js, Role-Based Access, Chatbot Integration, User Scheduling System, Expert Matching Algorithms.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New Project 4: Monitoring & Evaluation (M&E) Ecosystem for RAMP Project (MSME Ministry) -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="clipboard-check"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">RAMP Project M&E Ecosystem</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** Fragmented project tracking led to poor oversight. Developed a centralized M&E system to provide real-time insights into financial and operational KPIs.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Improved project reporting accuracy by 35%, enabled data-driven policy decisions, and enhanced resource allocation for better project outcomes.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** Power BI, SQL Server, Data ETL Pipelines, KPI Frameworks, Government API Integration, Impact Evaluation Models.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New Project 5: UP MSME 1-Connect – Unified Support Platform for MSMEs -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="globe"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">UP MSME Unified Support Platform</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** MSMEs struggled with fragmented services and limited access to schemes, training, and funding. Built a unified portal for e-learning, grievance redressal, loan tracking, and project management.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Served 50,000+ users within the first year, improved loan processing visibility by 40%, and reduced applicant dropout during registration by 30%.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** Flutter, Node.js, Power BI, AWS, API Gateway, Agile Sprints, Service Design Thinking, User Onboarding Flows.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- New Project 6: AI-Enabled Job Board App for Uttarakhand -->
+                <div class="project-card card-bg-dark rounded-xl shadow-lg overflow-hidden">
+                    <div class="project-icon-wrapper">
+                        <i data-lucide="user-check"></i>
+                    </div>
+                    <div class="p-6 content-area">
+                        <h3 class="text-xl font-bold text-dark-heading mb-2">Uttarakhand AI Job Board App</h3>
+                        <p class="text-sm text-dark-body mb-3">
+                            **Problem & Solution:** Job seekers lacked structured tools and access to quality opportunities, while recruiters faced challenges in finding relevant candidates. Built a smart job board with AI-powered tools for resume building, opportunity matching, and recruitment planning.
+                        </p>
+                        <p class="text-dark-body text-sm mb-3">
+                            **Impact/Results:** Facilitated 20,000+ job applications within 6 months, reduced mismatch rate in job recommendations by 35%, and onboarded 150+ third-party recruiters with custom recruitment plans.
+                        </p>
+                        <p class="text-dark-muted text-xs font-medium">
+                            **Tech/Methodology:** React Native, Node.js, MongoDB, AWS (Lambda, S3), AI Resume Builder (GPT API), Opportunity Matching Algorithm, LMS Integration, Webinar & Event Module, Role-Based Access, Agile Development.
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
